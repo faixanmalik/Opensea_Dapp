@@ -1,5 +1,5 @@
-import banner from '../assets/banner.png'
-import logo from '../assets/logo.png'
+import banner from '../public/banner.png'
+import logo from '../public/logo.png'
 
 export const collectionData = {
   name: 'CryptoPunks',
