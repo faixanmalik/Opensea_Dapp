@@ -3,14 +3,14 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { useAddress } from '@thirdweb-dev/react'
 import { MdVerified } from 'react-icons/md'
-// import TopNavbarLayout from '../../layouts/TopNavbarLayout'
+import TopNavbarLayout from '../../layouts/TopNavbarLayout'
 import CollectionStats from './CollectionStats'
 import { collectionData } from '../../static/collections'
 import Listings from './Listings'
 
 
 const style = {
-  wrapper: `flex flex-col relative flex flex-col my-20`,
+  wrapper: `flex flex-col`,
   container: `relative flex h-[650px] flex-col`,
   bannerContainer: `h-1/3 w-full`,
   banner: `rounded-t-lg object-cover`,
@@ -46,9 +46,12 @@ export default function Home() {
     })()
   }, [slug])
 
+
   return (
     <>
-    {/* <TopNavbarLayout> */}
+    <TopNavbarLayout>
+    <div className='container h-screen mt-10'>
+    
       <div className={style.wrapper}>
         <div className={style.container}>
           <div className={style.bannerContainer}>
@@ -94,10 +97,10 @@ export default function Home() {
           </div>
         </div>
 
-
-      </div>
-    {/* </TopNavbarLayout> */}
       <Listings/>
+      </div>
+    </div>
+    </TopNavbarLayout>
     </>
   )
 }
