@@ -44,6 +44,8 @@ const NFT = () => {
       console.log(error)
     }
   }
+
+  
   
   return (
     <>
